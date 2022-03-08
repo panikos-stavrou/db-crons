@@ -1,7 +1,11 @@
 /*  
     Table mt4_data_mart_reports.tbl_live_account_pnl saves LIVE, ON DEMAND, the P&L Change and Equity in EUR amounts for each and every one trading account.
     All amounts are calculated on the fly from the mt4_data_mart_reports.account_pnl view (which sums up all appropriate records from the data_mart.trades table).
-    It calculates P&L Change and Equity for 4 Different Periods: Live, Weekly, Biweekly and Monthly
+    It calculates P&L Change and Equity for 4 Different Periods: Live, Daily, Weekly, Biweekly and Monthly
+
+	The DAILY amounts are being used on two MT4 Management Reports Dashboard:
+	1. MT4 Live Top 10 Losing  Clients €
+	2. MT4 Live Top 10 Winning Clients €
 
     Sample Return:
     Login	P&L Change Equity EUR   Effective Period
