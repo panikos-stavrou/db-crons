@@ -30,7 +30,7 @@ TRUNCATE TABLE mt4_data_mart_reports.tbl_live_account_pnl;
 
 -- live account pnl 
 INSERT INTO mt4_data_mart_reports.tbl_live_account_pnl
-SELECT ap."login", ap.regulator, ap.ib_vs_retail,
+SELECT ap."login", ap.regulator, ap.ib_vs_retail, 
 		ROUND(SUM((equity - deposits) / lr.fx_to_eur)::NUMERIC, 2) AS pnl_diff, 
 		ROUND(SUM(equity / lr.fx_to_eur)::NUMERIC, 2) AS equity_eur,
 		'LIVE' AS effective_period 
